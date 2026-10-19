@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Instrument Sans', system-ui, sans-serif;
+  --font-serif: 'Instrument Serif', serif;
+  --font-mono: 'DM Mono', monospace;
+  --color-ink: #0b0b0c;
+  --color-paper: #fbfbfa;
+  --color-mute: #8a8a8e;
+  --color-line: rgba(11, 11, 12, 0.08);
+}
+
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background: var(--color-paper);
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: #ffd9d1; }
+* { scrollbar-width: none; }
+*::-webkit-scrollbar { display: none; }
+
+.mesh {
+  background:
+    radial-gradient(60% 45% at 0% 0%, #cfd8f7 0%, transparent 70%),
+    radial-gradient(50% 40% at 100% 0%, #dcd3f2 0%, transparent 70%),
+    radial-gradient(55% 45% at 0% 100%, #ffb7a8 0%, transparent 70%),
+    radial-gradient(55% 45% at 100% 100%, #ff9fae 0%, transparent 70%),
+    var(--color-paper);
+  background-attachment: fixed;
+}
+@keyframes rise { from { opacity: 0; transform: translateY(14px) } to { opacity: 1; transform: none } }
+.rise { animation: rise .7s cubic-bezier(.2,.7,.2,1) both; }
+@keyframes pop { 0% { transform: scale(.6) } 60% { transform: scale(1.15) } 100% { transform: scale(1) } }
+.pop { animation: pop .3s ease-out; }

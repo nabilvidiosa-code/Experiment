@@ -1,0 +1,10 @@
+{
+  "description": "Organize tasks efficiently with a modern, user-friendly to-do list app featuring engaging design and enhanced productivity tools for seamless task management.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
