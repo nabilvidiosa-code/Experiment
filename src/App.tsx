@@ -64,7 +64,7 @@ function CardFan({ onChange }: { onChange: (i: number) => void }) {
       ref={ref}
       onPointerMove={(e) => e.pointerType === 'mouse' && onMove(e)}
       onPointerLeave={() => go(Math.round(target.current))}
-      className="relative mx-auto h-[390px] w-full max-w-6xl select-none"
+      className="relative mx-auto h-[480px] w-full max-w-6xl select-none"
       aria-label="Kaoruko outfit cards — scroll to browse"
     >
       {looks.map((c, i) => {
@@ -75,10 +75,10 @@ function CardFan({ onChange }: { onChange: (i: number) => void }) {
           <button
             key={c.title}
             onClick={() => go(i)}
-            className="absolute bottom-0 left-1/2 h-[340px] w-[220px] overflow-hidden rounded-[34px] border-[5px] border-white bg-white text-left will-change-transform md:w-[270px]"
+            className="absolute bottom-0 left-1/2 h-[420px] w-[270px] overflow-hidden rounded-[34px] border-[5px] border-white bg-white text-left will-change-transform md:w-[270px]"
             style={{
               background: 'linear-gradient(180deg,#ffffff,#fff5f9)',
-              transform: `translate3d(calc(-50% + ${off * 165}px), ${abs * abs * 14 + abs * 22 - lift * 28}px, 0) rotate(${off * 6.5}deg) scale(${1 - Math.min(abs, 3) * 0.07 + lift * 0.04})`,
+              transform: `translate3d(calc(-50% + ${off * 200}px), ${abs * abs * 14 + abs * 22 - lift * 28}px, 0) rotate(${off * 6.5}deg) scale(${1 - Math.min(abs, 3) * 0.07 + lift * 0.04})`,
               zIndex: 100 - Math.round(abs * 10),
               opacity: Math.max(0, Math.min(1, 3.6 - abs)),
               boxShadow: `0 ${30 + lift * 20}px ${60 + lift * 30}px -24px rgba(214,51,108,${0.25 + lift * 0.3})`,
@@ -151,7 +151,7 @@ export default function App() {
           </h1>
           <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-plum/70 md:text-lg">A little fan corner for the sweetest girl of Kikyo Academy — cakes, warm smiles and a heart that blooms for everyone.</p>
         </div>
-        <div className="mt-10 px-4 pb-10"><CardFan onChange={setCurrent} /></div>
+        <div className="mt-6 px-4 pb-16"><CardFan onChange={setCurrent} /></div>
       </section>
 
       <div className="-rotate-2 bg-rose py-3 text-white">
