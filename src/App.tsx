@@ -365,18 +365,6 @@ export default function App() {
     <div className="min-h-screen overflow-x-clip">
       <Petals />
       <section className="relative isolate flex min-h-screen flex-col overflow-hidden transition-[background] duration-1000" style={{ background: `radial-gradient(ellipse at 50% 85%, ${looks[current].bg.match(/#\w+/g)![1]}55 0%, #fff0f5 60%)` }}>
-        <nav className="rise relative z-[200] mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-5 md:px-6 md:py-6">
-          <a href="#home" aria-label="Kaoruko Waguri" className="flex items-baseline gap-1.5 leading-none">
-            <span className="font-display text-2xl font-bold tracking-tight text-plum md:text-3xl">Kaoruko</span>
-            <span className="shimmer font-script text-xl md:text-2xl">Waguri</span>
-          </a>
-          <div className="hidden gap-1 rounded-full bg-white/80 p-1.5 shadow-sm backdrop-blur md:flex">
-            {['Home', 'Traits', 'Diary', 'About', 'Album'].map((l, i) => (
-              <a key={l} href={`#${l.toLowerCase()}`} className={`rounded-full px-5 py-2 text-sm font-semibold ${i === 0 ? 'bg-rose text-white' : 'text-plum/70 hover:text-berry'}`}>{l}</a>
-            ))}
-          </div>
-          <Heart className="h-6 w-6 text-rose md:hidden" />
-        </nav>
 
         {/* ambient: soft drifting glows + twinkling sparkles */}
         <div aria-hidden className="pointer-events-none absolute inset-0">
@@ -390,7 +378,7 @@ export default function App() {
         <span className="rise absolute left-[9%] top-[46%] hidden md:block [--d:1100ms]"><span className="floaty block rounded-full bg-white px-3 py-1 text-xs font-bold text-berry shadow-sm [--r:-6deg]">Sweet ♡</span></span>
         <span className="rise absolute right-[9%] top-[38%] hidden md:block [--d:1250ms]"><span className="floaty block rounded-full bg-white px-3 py-1 text-xs font-bold text-purple-500 shadow-sm [--r:6deg]">Kind heart ✿</span></span>
 
-        <div id="home" className="relative mx-auto max-w-4xl px-5 pt-0 sm:px-6 sm:pt-2 text-center">
+        <div id="home" className="relative mx-auto max-w-4xl px-5 pt-10 sm:px-6 sm:pt-14 text-center">
           <p className="rise inline-flex items-center gap-2 rounded-full bg-white px-4 py-1.5 [--d:150ms] text-xs font-semibold text-berry shadow-sm sm:text-sm"><Sparkle className="spin h-3.5 w-3.5" /> The Fragrant Flower Blooms with Dignity</p>
           <h1 className="mt-6 flex flex-col items-center font-display font-bold tracking-tight text-plum">
             <span className="rise block text-6xl leading-[0.9] [--d:300ms] sm:text-7xl md:text-[9.5rem]">Kaoruko</span>
